@@ -47,7 +47,7 @@ return [
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
             'host' => env('AZURE_MYSQL_HOST', '127.0.0.1'),
-            'port' => env('AZURE_MYSQL_PORT', '3307'),
+            'port' => env('AZURE_MYSQL_PORT', '3306'),
             'database' => env('AZURE_MYSQL_DBNAME', 'cloudcomputing'),
             'username' => env('AZURE_MYSQL_USERNAME', 'root'),
             'password' => env('AZURE_MYSQL_PASSWORD', ''),
@@ -56,12 +56,13 @@ return [
             'collation' => 'utf8mb4_unicode_ci',
             'prefix' => '',
             'prefix_indexes' => true,
-            'strict' => true,
+            'strict' => false, // Set to false if you encounter strict mode issues
             'engine' => null,
             'options' => extension_loaded('pdo_mysql') ? array_filter([
                 PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
             ]) : [],
         ],
+        
 
         'pgsql' => [
             'driver' => 'pgsql',
