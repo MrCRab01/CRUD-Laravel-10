@@ -50,7 +50,7 @@ return [
             'port' => env('AZURE_MYSQL_PORT', '3306'),
             'database' => env('AZURE_MYSQL_DBNAME', 'datapostcc-server.mysql.database.azure.com'),
             'username' => env('AZURE_MYSQL_USERNAME', 'opfxkvohnw),
-            'password' => env('AZURE_MYSQL_PASSWORD', 'BX3N4ATOETN0XKI7$'),
+            'password' => env('AZURE_MYSQL_PASSWORD', ''),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
